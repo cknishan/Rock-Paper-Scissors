@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div><!--content wrapper-->
+        <!-- nav bar -->
+        <nav>
+            <div class="dropdown">
+                <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <div class="dropdown-content">
+                    <a href="#">Rules</a>
+                    <a href="#">Settings</a>
+                    <a href="#">About</a>
+                </div>
+              </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div>
+                <h2>Player</h2>
+                <div>Choose Your Weapon</div>
+                <div class="player-weapons weapons-container">
+                    <div><img src="img/icons/rock.png" alt=""></div>
+                    <div><img src="img/icons/paper.png" alt=""></div>
+                    <div><img src="img/icons/scissors.png" alt=""></div>
+                </div>
+                <div class="weapon-chosen-player">
+                    <img id="weapon-img-player" src="" alt="">
+                </div>
+            </div>
+            <div>
+                <h2>Score</h2>
+                <div id="score-display">
+                    <div>
+                        <p>Player Score</p>
+                        <span id="player-score"></span>
+                    </div>
+                    <div>---------------</div>
+                    <div>
+                        <p>Computer Score</p>
+                        <span id="computer-score"></span>
+                    </div>
+                </div>
+                <div id="round-details"></div>
+            </div>
+            <div>
+                <h2>Computer</h2>
+                <div>Thinking...</div>
+                <div class="computer-weapons weapons-container">
+                    <div><img src="img/icons/rock.png" alt=""></div>
+                    <div><img src="img/icons/paper.png" alt=""></div>
+                    <div><img src="img/icons/scissors.png" alt=""></div>
+                </div>
+                <div class="weapon-chosen-computer">
+                    <div>
+                        <img id="weapon-img-computer" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div>
+                dasfdsfadsaf
+            </div>
+        </main>
+    </div>
+</body>
+</html>
