@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/rock-paper-scissors.png">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/settings.js" defer></script>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+:root{
+    --color-primary:#ffdd59;
+    --color-secondary:#d2dae2;
+}
+
+body{
+    background-color: var(--color-secondary);
+    height: 100vh;
+    line-height: 1.5rem;
+    padding: 1rem 1rem;
+}
+
+svg {
+    height: 1.5rem;
+}
+
+nav, main, footer, p, h2{
+    padding: 1rem 1rem;
+}
+
+i {
+    font-size: 1.8rem;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover{
+    border-bottom: blue 2px solid;
+    margin-bottom: -2px;
+}
+
+.copyright_icon{
+    font-size: 1.5rem;
+}
+
+</style>
+</head>
+<body>
+    <div><!--content wrapper-->
+        <!-- nav bar -->
+        <nav>
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                  </svg>
+                  <span>Back to Game</span>
+            </a>
+        </nav>
+        <main>
+            <h2>How to play</h2>
+            <div>
+                <p>
+                    The game is played with three possible hand signals that represent a rock, paper, and scissors. The rock is a closed fist; paper is a flat hand with fingers and thumb extended and the palm facing downward; and scissors is a fist with the index and middle fingers fully extended toward the opposing player. Rock wins against scissors; paper wins against rock; and scissors wins against paper. If both players throw the same hand signal, it is considered a tie, and play resumes until there is a clear winner.<a href="https://www.pgpedia.com/r/rock-paper-scissors#:~:text=The%20rock%20is%20a%20closed,and%20scissors%20wins%20against%20paper.">[Reference]</a>
+                </p>
+                <div>
+                    <p>Watch a tutorial below. Ironically anyone who will come across this website will not need a tutorial but whatever..</p>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2dsHuU10udY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="copyright_icon">&copy;</span> Copyright 2022 
+            <a href="https://github.com/cknishan" target="_blank">
+                <span>
+                    cknishan
+                    <i class="fab fa-github"></i>
+                </span>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

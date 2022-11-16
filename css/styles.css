@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: 'Press Start 2P', cursive;
   }
 
 :root{
@@ -12,6 +15,7 @@
 body{
   background-color: var(--color-secondary);
   height: 100vh;
+  line-height: 1.5rem;
 }
 
 #menu{
@@ -114,4 +118,9 @@ img {
 
 .main-content>div:nth-child(4n){
   display: none;
+}
+
+svg {
+  display: inline-block;
+  width: 50%;
 }

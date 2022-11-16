@@ -104,11 +104,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-[...document.querySelectorAll('.dropdown-content > a')].forEach((e) => {
-  e.addEventListener('click', () => {
-    alert("Sorry for inconvenience. These content hasn't been added yet.")
-  })
-})
+// [...document.querySelectorAll('.dropdown-content > a')].forEach((e) => {
+//   e.addEventListener('click', () => {
+//     alert("This will redirect to a different page and reset game progress")
+//   })
+// })
 
 
 
