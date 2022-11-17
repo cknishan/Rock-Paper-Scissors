@@ -1,7 +1,7 @@
 const weapons = ['rock','paper','scissors']
 
-playerImgSrc = document.querySelector('#weapon-img-player')
-computerImgSrc = document.querySelector('#weapon-img-computer')
+let playerImgSrc = document.querySelector('#weapon-img-player')
+let computerImgSrc = document.querySelector('#weapon-img-computer')
 
 const weaponList = [...document.querySelectorAll('.player-weapons > div')];
 
@@ -12,9 +12,12 @@ let computerScoreText = document.querySelector("#computer-score")
 let playerScore = 0;
 let computerScore = 0;
 
+// Settings modal variables
+let gamePoint = document.querySelector("#game-point")
+gamePoint.defaultValue = 5
+const submitBtn = document.querySelector("#submit-btn")
 
 weaponList.forEach((e) => {
-  
   e.addEventListener('click', () => {
   const playerSelection = getPlayerChoice(e)
   const computerSelection = getComputerChoice();
@@ -25,7 +28,7 @@ weaponList.forEach((e) => {
   },5);
 
   playerImgSrc.classList.remove('img-transition');
-    computerImgSrc.classList.remove('img-transition');
+  computerImgSrc.classList.remove('img-transition');
 
   playRound(playerSelection, computerSelection)
   
@@ -101,6 +104,25 @@ function playRound(playerSelection, computerSelection) {
     <p> Computer chose ${computerSelection}.</p>
     `
 
+  // console.log(playerScore, computerScore, gamePoint.value)
+  setTimeout(function(){
+    if (computerScore == gamePoint.value || playerScore == gamePoint.value) {
+      alert("Game Over!")
+
+      const winner = ( playerScore > computerScore ? "Player" : "Computer" )
+      roundDescription.innerHTML = `
+      <h3> The winner is ${winner}!! </h3>
+      `  
+      playerScore = 0;
+      computerScore = 0
+      return 
+    }
+  },5);
+
+}
+
+function getGamePoint(num) {
+
 }
 
 
@@ -110,5 +132,30 @@ function playRound(playerSelection, computerSelection) {
 //   })
 // })
 
+// Settings modal
 
+const settingsBtn = document.querySelector("#settings-btn")
+const settingsClose = document.querySelector(".settings-close")
+const settings = document.querySelector(".settings-wrapper")
+
+let gamePoint2 = null;
+settingsBtn.addEventListener("click", () => {
+  gamePoint2 = gamePoint.value
+  settings.style.display = 'grid';
+})
+
+settingsClose.addEventListener('click', () => {
+  console.log(gamePoint2)
+  gamePoint.value = gamePoint2
+  settings.style.display = 'none';
+})
+
+submitBtn.addEventListener('click', () => {
+  while (gamePoint.value <=0 || gamePoint.value > 100) {
+    alert("Input can't be less than 0 or greater than 100")
+    alert("If invalid value is selected it will return to default value of 5")
+    gamePoint.value = 5
+  }
+  settings.style.display = 'none';
+})
 

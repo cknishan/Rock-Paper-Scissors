@@ -8,7 +8,6 @@
   }
 
 :root{
-  --color-primary:#ffdd59;
   --color-secondary:#d2dae2;
 }
 
@@ -93,9 +92,6 @@ img {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
   .main-content{
   display: flex;
   text-align: center;
@@ -123,4 +119,80 @@ img {
 svg {
   display: inline-block;
   width: 50%;
+}
+
+/* Settings */
+
+.settings-wrapper{
+  /* display: grid; */
+  height: 100vh;
+  width: 100vw;
+  background: rgba(40, 42, 50, 0.785);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  /* overflow: none; */
+  place-items: center;
+  display: none;
+}
+
+.settings-content{
+  position: relative;
+  padding: 10vh 10vw;
+  background: black;
+  color: var(--color-secondary);
+}
+.settings-close{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-size: 1.5rem
+}
+
+#settings-btn:hover{
+  cursor: pointer;
+}
+
+.settings-heading{
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+.settings-message{
+  padding-bottom: 2rem;
+}
+
+input,
+button{
+  padding: .8rem 1.3rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+input[type="submit"] {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--color-secondary);
+  background-color: #222;
+  border: 1px solid var(--color-secondary);
+  border-radius: 15px;
+  box-shadow: 0 5px var(--color-secondary);
+}
+
+
+input[type="submit"]:hover {
+  background-color: #333;
+}
+
+
+input[type="submit"]:active {
+  background-color: #333;
+  color: var(--color-secondary);
+  box-shadow: 0 2px var(--color-secondary);
+  transform: translateY(4px);
 }
